@@ -12,8 +12,23 @@ export const Container = styled.div`
 
 
 export const Content = styled.div`
-    background-color: #FFFFFF;
+    background-color: #CACACA;
     width: 50%;
+    `
+
+export const LargerButton = styled.button`
+    width: 50%;
+    height: 71px;
+    padding: 20px;
+    border: 1px solid #CDCDCD;
+    background-color: #00AAF0;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+
+    &:hover {
+        opacity: 0.6;
+    }
 `
 
 export const Row = styled.div`
@@ -23,10 +38,10 @@ export const Row = styled.div`
     align-items: center;
 `
 
-export const Column = styled.div`
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-`
-
+export const LabeledLargerButton = ({ label, onClick }) => {
+    return (
+      <LargerButton onClick={onClick}>
+       {label}
+      </LargerButton>
+    );
+  };
